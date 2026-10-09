@@ -1,58 +1,189 @@
+```css
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Background */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #edf5fc;
+    color: #26374a;
+    line-height: 1.7;
+    padding: 35px 15px;
 }
 
+/* Resume Container */
 .container {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 55px 65px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(64, 117, 164, 0.12);
+    border-top: 6px solid #75b9f2;
 }
 
+/* Header */
 header {
-	text-align: center;
-	margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 2px solid #dcecfb;
 }
 
-h1 {
-	font-size: 36px;
-	margin: 0;
+header h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #174a78;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
 }
 
-p {
-	font-size: 18px;
-	margin: 0;
+header p {
+    font-size: 15px;
+    color: #60758b;
+    margin: 4px 0;
+    line-height: 1.7;
 }
 
+/* Sections */
 section {
-	margin-bottom: 50px;
+    margin-bottom: 32px;
 }
 
+/* Section Headings */
 h2 {
-	font-size: 24px;
-	margin-bottom: 20px;
+    font-size: 22px;
+    color: #17649c;
+    background-color: #edf6ff;
+    padding: 9px 14px;
+    margin-bottom: 17px;
+    border-left: 4px solid #65afea;
+    border-radius: 4px;
 }
 
+/* Paragraphs */
+p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #46586b;
+}
+
+/* Subheadings */
+h3 {
+    font-size: 17px;
+    color: #244d70;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+/* Lists */
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 8px 0 15px;
+    padding-left: 22px;
+    list-style-type: disc;
 }
 
 li {
-	display: inline-block;
-	margin-right: 10px;
-	font-size: 18px;
+    display: list-item;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    padding-left: 3px;
+    color: #46586b;
 }
 
-h3 {
-	font-size: 20px;
-	margin-top: 20px;
-	margin-bottom: 10px;
+li::marker {
+    color: #55a5e8;
 }
 
-p {
-	font-size: 18px;
-	line-height: 1.5;
+/* Links */
+a {
+    color: #1675b9;
+    text-decoration: none;
+    overflow-wrap: anywhere;
 }
+
+a:hover {
+    color: #0b4f83;
+    text-decoration: underline;
+}
+
+/* Highlighted Text */
+strong {
+    color: #174a78;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 25px 20px;
+        border-radius: 8px;
+    }
+
+    header {
+        margin-bottom: 28px;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p,
+    li {
+        font-size: 14px;
+    }
+
+    section {
+        margin-bottom: 25px;
+    }
+}
+
+/* Print-Friendly Resume */
+@media print {
+    body {
+        background: #ffffff;
+        padding: 0;
+        color: #26374a;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 25px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    header,
+    section {
+        break-inside: avoid;
+    }
+
+    h2 {
+        background-color: #edf6ff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+```
